@@ -14,6 +14,13 @@ app.get("/", (req, res) => {
     })
 });
 
+app.get("/apple", (req, res) => {
+    return res.status(200).json({
+        status : true , 
+        message : "Hello from apple"
+    })
+});
+
 app.all("*", (req, res) =>{
     res.status(404).json({
         status : false ,
