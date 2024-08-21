@@ -21,6 +21,13 @@ app.get("/apple", (req, res) => {
     })
 });
 
+app.get("/banana", (req, res) => {
+    return res.status(200).json({
+        status : true , 
+        message : "Hello from banana"
+    })
+});
+
 app.all("*", (req, res) =>{
     res.status(404).json({
         status : false ,
