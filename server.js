@@ -28,6 +28,16 @@ app.get("/banana", (req, res) => {
     })
 });
 
+app.post("/data", (req, res) => {
+    const {first , last } = req.body;
+    return res.status(200).json({
+        status : true , 
+        message : {
+            first , last
+        }
+    })
+});
+
 app.all("*", (req, res) =>{
     res.status(404).json({
         status : false ,
